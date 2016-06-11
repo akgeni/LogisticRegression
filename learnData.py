@@ -12,7 +12,7 @@ def logistic_classifier(data, target):
 	'''
 	sentiment_model = sklearn.linear_model.LogisticRegression()
 	sentiment_model.fit(data, target)
-	print("You logistic classifier is ready")
+	print("Your logistic classifier is ready")
 	return sentiment_model
 
 def map_prediction(score):
