@@ -2,7 +2,7 @@
 """
 Created on Sat Jun 11 21:48:17 2016
 
-@author: akgeni
+@author: akgeni@gmail.com
 """
 import sys
 
