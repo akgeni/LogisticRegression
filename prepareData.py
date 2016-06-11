@@ -9,6 +9,8 @@ import sframe
 import string
 
 from sklearn.feature_extraction.text import CountVectorizer
+
+vectorizer = CountVectorizer(token_pattern=r'\b\w+\b')
 def read_and_clean_data():
 	'''Reads data and clean the words with punctuation
 	e.g. Hello! => Hello
@@ -36,8 +38,12 @@ def bagof_words(data):
 	'''return the a sparse matrix where each row is the word count vector
 	for the corresponding review
 	'''
-	vectorizer = CountVectorizer(token_pattern='\b\w+\b')
+	
 	return vectorizer.fit_transform(data['clean_review'])
+	
+	
+def transfrom_data(data):
+	return vectorizer.transform(data)
 	
 
 
